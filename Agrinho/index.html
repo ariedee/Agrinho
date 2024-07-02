@@ -2,20 +2,58 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-    content="width=device-width, initialscale=1.0">
-        <title>Transformando papel em novas possibilidades: Uma abordagem Sustentável de reciclagem</title>
-        <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papel Novo, Mundo Novo - Jogo de Reciclagem</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Transformando papel em novas possibilidades: Uma abordagem Sustentável de reciclagem</h1>
-        <form id="activityForm">
-            <input type="text" id="date" placeholder="Data (dd/mm/aaaa)" required>
-            <input type="text" id="description" placeholder="Descrição da atividade" required>
-            <button type="submit">Adicionar Atividade</button>
-        </form>
-        <ul id="activityList"></ul>
+        <header>
+            <h1>Papel Novo, Mundo Novo</h1>
+            <p>Vamos aprender a reciclar com diversão!</p>
+        </header>
+        <main>
+            <div id="gameStage1" class="game-stage">
+                <h2>Etapa 1: Quiz de Reciclagem</h2>
+                <div id="character">
+                    <img src="assets/character1.png" alt="Personagem 1">
+                </div>
+                <div id="questionContainer">
+                    <h3 id="question">Pergunta</h3>
+                    <div id="answerButtons" class="btn-container">
+                        <!-- Botões de resposta vão aqui -->
+                    </div>
+                </div>
+                <button id="nextButton" class="btn" hidden>Próxima Pergunta</button>
+            </div>
+            <div id="gameStage2" class="game-stage" hidden>
+                <h2>Etapa 2: Jogo da Memória</h2>
+                <div id="character">
+                    <img src="assets/character2.png" alt="Personagem 2">
+                </div>
+                <div id="memoryGame">
+                    <!-- Cartas do jogo da memória vão aqui -->
+                </div>
+                <button id="memoryNextButton" class="btn" hidden>Próxima Etapa</button>
+            </div>
+            <div id="gameStage3" class="game-stage" hidden>
+                <h2>Etapa 3: Classificação de Recicláveis</h2>
+                <div id="character">
+                    <img src="assets/character3.png" alt="Personagem 3">
+                </div>
+                <div id="dragDropGame">
+                    <div class="bins">
+                        <div class="bin" id="bin-paper">Papel</div>
+                        <div class="bin" id="bin-plastic">Plástico</div>
+                        <div class="bin" id="bin-glass">Vidro</div>
+                    </div>
+                    <div class="items">
+                        <!-- Itens recicláveis vão aqui -->
+                    </div>
+                </div>
+                <button id="restartButton" class="btn">Recomeçar Jogo</button>
+            </div>
+        </main>
     </div>
     <script src="script.js"></script>
 </body>
